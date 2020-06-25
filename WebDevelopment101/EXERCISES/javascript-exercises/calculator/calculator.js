@@ -1,25 +1,24 @@
-function add () {
-	
+function add(deg1, deg2) {
+	return deg1 + deg2;
 }
 
-function subtract () {
-	
+function subtract(deg1, deg2) {
+	return deg1 - deg2;
 }
 
-function sum () {
-	
+function sum(array) {
+	return array.reduce((total, current) => total + current, 0);
 }
+function multiply() {
 
-function multiply () {
-	
 }
 
 function power() {
-	
+
 }
 
 function factorial() {
-	
+
 }
 
 module.exports = {
@@ -27,6 +26,6 @@ module.exports = {
 	subtract,
 	sum,
 	multiply,
-    power,
+	power,
 	factorial
 }
