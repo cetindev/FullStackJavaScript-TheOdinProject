@@ -26,11 +26,11 @@ sec.addEventListener('click', () => {
   alert("alooooo!!");
 });
 
-const buttons = document.querySelectorAll('button');
+const buttons = document.querySelector('div.container .aaa');
 // we use the .forEach method to iterate through each button
-buttons.forEach((button) => {
+buttons.forEach((buttons) => {
   // and for each one we add a 'click' listener
-  button.addEventListener('click', (e) => {
-    alert(button.id);
+  button.addEventListener('click', () => {
+    alert('button.id');
   });
 });
