@@ -25,12 +25,13 @@ sec.addEventListener('click', () => {
   // e.target.style.background = 'blue';
   alert("alooooo!!");
 });
+const ph = document.createElement('p');
 
 const buttons = document.querySelector('div.container .aaa');
 // we use the .forEach method to iterate through each button
 buttons.forEach((buttons) => {
   // and for each one we add a 'click' listener
-  button.addEventListener('click', () => {
+  buttons.addEventListener('click', () => {
     alert('button.id');
   });
 });
