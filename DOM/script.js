@@ -22,7 +22,16 @@ body.appendChild(denemeee);
 // const div = document.querySelector('div');
 const pinkDiv = document.createElement('div');
 pinkDiv.classList.add('exercis');
-div.style.backgroundColor = pink;
-div.borderColor = black;
-div.textContent = 'deneme'
-body.appendChild(div);
+pinkDiv.style.backgroundColor = 'pink';
+pinkDiv.borderColor = 'black';
+pinkDiv.textContent = 'deneme dfsdafasdfsadf'
+body.appendChild(pinkDiv);
+
+const swc = document.querySelector('div.exercis');
+const hbir = document.createElement('h1');
+hbir.textContent = 'I\'m in a div';
+swc.appendChild(hbir);
+
+const pekle = document.createElement('p');
+pekle.textContent = 'ME TOO';
+swc.appendChild(pekle);
