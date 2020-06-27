@@ -1,7 +1,7 @@
 body {
   text-align: center;
+  background-color: black;
 }
-
 .children-fit-container {
   display: inline-block;
   text-align: start;
@@ -16,8 +16,8 @@ body {
   padding: 10px;
   border-radius: 5px;
   display: grid;
-  width: 720px;
-  height: 720px;
+  width: 800px;
+  height: 800px;
   border: 2px solid black;
 }
 .grid-container > div.cell-border-right {
@@ -27,11 +27,17 @@ body {
   border-bottom: 1px dotted rgb(200, 200, 200);
 }
 #new-grid-btn {
+  background-color: darkslategrey;
   margin-bottom: 8px;
   display: block;
   position: relative;
-  left: 43%;
+  left: 46.5%;
   padding: 25px 25px;
   margin: 15px;
   box-sizing: border-box;
+  color: aliceblue;
 } 
+.title {
+  color: white;
+  /* font-size: 20px; */
+}
