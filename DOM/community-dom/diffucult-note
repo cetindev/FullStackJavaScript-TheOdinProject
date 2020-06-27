@@ -1,0 +1,6 @@
+alır 	  Seçici Sözdizimi	  Yöntem
+İD	    #demo	              getElementById()
+Sınıf	  .demo	              getElementsByClassName()
+Etiket	 demo	              getElementsByTagName()
+Seçici  (tekli)		          querySelector()
+Seçici  (tümü)		            querySelectorAll()
