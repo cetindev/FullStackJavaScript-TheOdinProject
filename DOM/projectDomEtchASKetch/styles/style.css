@@ -16,8 +16,8 @@ body {
   padding: 10px;
   border-radius: 5px;
   display: grid;
-  width: 800px;
-  height: 800px;
+  width: 700px;
+  height: 500px;
   border: 2px solid black;
 }
 .grid-container > div.cell-border-right {
@@ -33,11 +33,19 @@ body {
   position: relative;
   left: 46.5%;
   padding: 25px 25px;
-  margin: 15px;
+  margin: 10px;
   box-sizing: border-box;
   color: aliceblue;
+  position: relative;
+  text-align: center;
+  box-sizing: border-box;
+
 } 
 .title {
   color: white;
   /* font-size: 20px; */
+  display: inline;
+  line-height: 5px;
+  position: relative;
+  text-align: center;
 }
