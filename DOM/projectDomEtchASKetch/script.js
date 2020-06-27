@@ -1,5 +1,5 @@
 const container = document.getElementById('container');
-
+const body = document.getElementsByClassName('body');
 function makeRows(rows, cols) {
   container.style.setProperty('--grid-rows', rows);
   container.style.setProperty('--grid-cols', cols);
@@ -9,19 +9,25 @@ function makeRows(rows, cols) {
     container.appendChild(cell).className = 'grid-item';
   };
 
-  cell[4].style.backgroundColor = blue;
+  // cell[4].style.backgroundColor = blue;
 };
-
 makeRows(4, 4);
-document.getElementById("demo").addEventListener("mouseover", mouseOver);
-document.getElementById('demo').addEventListener("mouseout", mouseOut);
+
+const cellal = document.getElementsByClassName('grid-item');
+document.getElementById("container").addEventListener("mouseover", mouseOver);
+document.getElementById("container").addEventListener("mouseout", mouseOut);
+
 function mouseOver() {
-  document.getElementById('demo').style.color = "red";
+  document.getElementById("container").style.color = "red";
 }
 
 function mouseOut() {
-  document.getElementById('demo').style.color = "black";
+  document.getElementById("container").style.color = "black";
 }
+
+const buton = getElementsByClassName('buton');
+container.appendChild(buton);
+buton.style.color = "blue";
 /*
 const grid = document.getElementsByClassName('grid-item');
 grid.addEventListener('mouseenter', function (event) {

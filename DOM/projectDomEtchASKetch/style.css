@@ -16,3 +16,16 @@
   opacity: 0.5;
 
 } */
+.buton {
+  position: absolute;
+  right: 0;;
+  top: 0px;
+  padding: 5px 5px;
+  margin: 10px 15px;
+  width: 5%;
+  height: 4%;
+
+
+}
+
+
