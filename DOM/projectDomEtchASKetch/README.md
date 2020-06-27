@@ -1,2 +1,2 @@
 https://github.com/onagova/etch-a-sketch
-I cited the repo here
+I cited the repo here.
