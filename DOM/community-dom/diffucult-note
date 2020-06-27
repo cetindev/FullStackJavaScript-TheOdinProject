@@ -3,4 +3,4 @@ alır 	  Seçici Sözdizimi	  Yöntem
 Sınıf	  .demo	              getElementsByClassName()
 Etiket	 demo	              getElementsByTagName()
 Seçici  (tekli)		          querySelector()
-Seçici  (tümü)		            querySelectorAll()
+Seçici  (tümü)		          querySelectorAll()
