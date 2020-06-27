@@ -1,31 +1,35 @@
-#container {
-  display: grid;
-  grid-gap: 1em;
-  grid-template-rows: repeat(var(--grid-rows), 1fr);
-  grid-template-columns: repeat(var(--grid-cols), 1fr);
-}
-.grid-item {
-  padding: 2em;
-  border: 10px solid #ddd;
+body {
   text-align: center;
-  margin: 60px 50px;
-  /* background-color: red; */
-  font-size: 1.12em;
-}
-/* .grid-item:hover {
-  opacity: 0.5;
-
-} */
-.buton {
-  position: absolute;
-  right: 0;;
-  top: 0px;
-  padding: 5px 5px;
-  margin: 10px 15px;
-  width: 5%;
-  height: 4%;
-
-
 }
 
-
+.children-fit-container {
+  display: inline-block;
+  text-align: start;
+  left: 50%;
+  position: grid;
+  margin: 20px solid red;
+  
+}
+.grid-container {
+  padding: 10px;
+  border-radius: 5px;
+  display: grid;
+  width: 720px;
+  height: 720px;
+  border: 2px solid black;
+}
+.grid-container > div.cell-border-right {
+  border-right: 1px dotted rgb(200, 200, 200);
+}
+.grid-container > div.cell-border-bottom {
+  border-bottom: 1px dotted rgb(200, 200, 200);
+}
+#new-grid-btn {
+  margin-bottom: 8px;
+  display: block;
+  position: relative;
+  left: 50%;
+  padding: 25px 25px;
+  margin: 15px;
+  
+} 
