@@ -189,7 +189,7 @@ function getRandomInteger(max) {
 }
 
 
-/*
+/* *
 function initButtons () {
   var body = document.body.button,i;
   for ( i = 0; i<5 ; i++) {
