@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Mono&display=swap");
+
+* {
+  font-family: "Fire Mono", monospace, sans-serif;
+}
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background: white;
+  background: linear-gradient(135deg, rgba(255,255,255,1) 5%, rgba(164,164,184,1) 50%, rgba(38,139,159,1) 100%);
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: 1fr 20%;
+  grid-template-areas: 
+  "keypad"
+  "footer";  
+}
+#keypad {
+  grid-area: keypad;
+}
+#footer {
+  grid-area: footer;
+}
+/*Hesap makinası style bölümü*/
