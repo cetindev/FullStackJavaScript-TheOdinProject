@@ -1,1 +1,69 @@
 /* Style will be written here */
+html {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+body {
+  margin: 0;
+  background-color: #303030;
+  height: 100%;
+  width: 100%;
+}
+#container {
+  width: 100%;
+  height: 100%;
+  background-color: lightskyblue;
+  display: grid;
+  grid-template-rows: 1fr 1.5fr;
+}
+#screen {
+  padding: 40px;
+  background-color: #404040;
+  color: snow;
+  font-size: 64px;
+  font-weight: bold;
+  position: relative;
+}
+#buttons {
+  width: 100%;
+  background-color: mediumspringgreen;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+}
+button {
+  font-size: 44px;
+  background-color: #616161;
+  border: 1px solid #555555;
+  color: whitesmoke;
+  font-weight: lighter;
+}
+button:hover {
+  background-color: #555555;
+}
+button:active {
+  background-color: #474747;
+  color: red;
+  border: 1px solid #474747;
+}
+button:focus {
+  outline: none;
+}
+#keySixteen {
+  grid-column: 1/3;
+}
+#keyEighteen {
+  grid-column: 4;
+  grid-row: 4/6;
+}
+#expression {
+  overflow: hidden;
+  overflow-wrap: anywhere;
+}
+#result {
+  text-align: end;
+  position: absolute;
+  bottom: 0;
+  right: 0px;
+  padding: 20px;
+}
