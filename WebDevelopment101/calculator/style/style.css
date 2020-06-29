@@ -54,5 +54,40 @@ sonra grid-template-areas ile bunların yerlerini belirledik yani sıraladık. �
   grid-area: dec;
 }
 #zero {
-  
+  grid-area: zero;
 }
+#one {grid-area: one;}
+
+#two {grid-area: two;}
+
+#three {grid-area: three;}
+
+#four {grid-area: four;}
+
+#five {grid-area: five;}
+
+#six {grid-area: six;}
+
+#seven {grid-area: seven;}
+
+#eight {grid-area: eight;}
+
+#nine {grid-area: nine;}
+
+#add {grid-area: add;}
+
+#subtract {grid-area: subtract;}
+
+#multiply {grid-area: multiply;}
+
+#divide {grid-area: divide;}
+
+#equal {grid-area: equal;}
+
+#openBracket {grid-area: openBracket;}
+
+#closeBracket {grid-area: closeBracket;}
+
+#Clear {grid-area: Clear;}
+
+#Back {grid-area: Back;}
