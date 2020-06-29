@@ -11,40 +11,40 @@
 
 <body>
   <!-- Html elements will be written here -->
-  <div class="calculator">
-    <div class="display">
-      <div id="previousOutput" class="output"></div>
-      <div id="displayOutput" class="output"></div>
+  <div id="calculator" >
+    <div id="display">
+        <div id="previousOutput" class="output"></div>
+        <div id="displayOutput" class="output"></div>
     </div>
-    <div class="keyboard">
-      <input type="button" class="operand" value="." id="dec">
-      <input type="button" class="operand" value="0" id="zero">
-      <input type="button" class="operand" value="1" id="one">
-      <input type="button" class="operand" value="2" id="two">
-      <input type="button" class="operand" value="3" id="three">
-      <input type="button" class="operand" value="4" id="four">
-      <input type="button" class="operand" value="5" id="five">
-      <input type="button" class="operand" value="6" id="six">
-      <input type="button" class="operand" value="7" id="seven">
-      <input type="button" class="operand" value="8" id="eight">
-      <input type="button" class="operand" value="9" id="nine">
-      <input type="button" class="operator" id="add" value="+">
-      <input type="button" class="operator" id="subtract" value="-">
-      <input type="button" class="operator" id="multiply" value="*">
-      <input type="button" class="operator" id="divide" value="/">
-      <input type="button" class="operator" id="equal" value="=">
-      <input type="button" class="operator" id="openBracket" value="(">
-      <input type="button" class="operator" id="closeBracket" value=")">
-      <input type="button" class="operator" id="Clear" value="Clear">
-      <input type="button" class="operator" id="Back" value="⇤">
+    <div id="keyboard">
+        <input id="dec" class="operand" value="." type="button">
+        <input id="zero" class="operand" value="0" type="button">
+        <input id="one" class="operand" value="1" type="button">
+        <input id="two" class="operand" value="2" type="button">
+        <input id="three" class="operand" value="3" type="button">
+        <input id="four" class="operand" value="4" type="button">
+        <input id="five" class="operand" value="5" type="button">
+        <input id="six" class="operand" value="6" type="button">
+        <input id="seven" class="operand" value="7" type="button">
+        <input id="eight" class="operand" value="8" type="button">
+        <input id="nine" class="operand" value="9" type="button">
+        <input id="add" class="signOperator" value="+" type="button">
+        <input id="subtract" class="signOperator" value="-" type="button">
+        <input id="multiply" class="signOperator" value="x" type="button">
+        <input id="divide" class="signOperator" value="÷" type="button">
+        <input id="equal" class="signOperator" value="=" type="button">
+        <input id="openBracket" class="operator" value="(" type="button">
+        <input id="closeBracket" class="operator" value=")" type="button">
+        <input id="Clear" class="operator" value="Clear" type="button">
+        <input id="Back" class="operator" value="⇤" type="button">
     </div>
-  </div>
-  <div id="footer">
+</div>
+
+<div id = "footer">
     <p>A project by Sasoun Torossian. 2020</p>
     <a id="gitLink" href="https://github.com/SasounTorossian">
-      <img alt="Github" src="https://sasountorossian.github.io/Calculator/images/Github%20Logo.png"
-        height="60px"></a>
-  </div>
+        <img alt="Github" src="images/Github Logo.png" height="60px"></a>
+</div>
   <script src="script/script.js"></script>
 </body>
 

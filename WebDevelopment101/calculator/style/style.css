@@ -1,27 +1,35 @@
 @import url("https://fonts.googleapis.com/css?family=Fira+Mono&display=swap");
 
 * {
-  font-family: "Fire Mono", monospace, sans-serif;
+    font-family: "Fire Mono", monospace, sans-serif;
 }
+
 html {
-  height: 100%;
-  width: 100%;
+    height: 100%;
+    width:  100%;
+    margin: 0;
+    padding: 0;
 }
+
 body {
-  background: white;
-  background: linear-gradient(135deg, rgba(255,255,255,1) 5%, rgba(164,164,184,1) 50%, rgba(38,139,159,1) 100%);
-  display: grid;
-  min-height: 100vh;
-  grid-template-rows: 1fr 20%;
-  grid-template-areas: 
-  "keypad"
-  "footer";  
+    background: white;
+    background: linear-gradient(135deg, rgba(255,255,255,1) 5%, rgba(164,164,184,1) 50%, rgba(38,139,159,1) 100%);
+    display: grid;
+    padding: 0%;
+    margin: 0%;
+    min-height: 100vh;
+    grid-template-rows: 1fr 20%;
+    grid-template-areas: 
+    "keypad"
+    "footer";
 }
+
 #keypad {
-  grid-area: keypad;
+    grid-area: keypad;
 }
+
 #footer {
-  grid-area: footer;
+    grid-area: footer;
 }
 /*Hesap makinası style bölümü*/
 /* Burada grid olan calculator divinin içindeki elemanları grid yaptık ardından rows ve 
@@ -29,6 +37,8 @@ colums kaç adet olduğunu ve kaçar px'er olacağına karar verdik 7 rows(satı
 sonra grid-template-areas ile bunların yerlerini belirledik yani sıraladık. Şekilde de görüldüğü gibi 
 
 */
+/* CALCULATOR */
+/* CALCULATOR */
 #calculator {
   margin: auto;
   display: grid;
@@ -44,18 +54,14 @@ sonra grid-template-areas ile bunların yerlerini belirledik yani sıraladık. �
   "zero dec equal divide";
 }
 /*Şekil itibari ile konumlandırdıkdan sonra bunlara grid-area lara değer verdik*/
-#previousOutput{
-  grid-area: previousOutput;
-}
-#displayOutput {
-  grid-area: displayOutput;
-}
-#dec {
-  grid-area: dec;
-}
-#zero {
-  grid-area: zero;
-}
+#previousOutput {grid-area: previousOutput;}
+
+#displayOutput {grid-area: displayOutput;}
+
+#dec {grid-area: dec;}
+
+#zero {grid-area: zero;}
+
 #one {grid-area: one;}
 
 #two {grid-area: two;}
@@ -91,3 +97,154 @@ sonra grid-template-areas ile bunların yerlerini belirledik yani sıraladık. �
 #Clear {grid-area: Clear;}
 
 #Back {grid-area: Back;}
+
+/* DISPLAY */
+#display {
+    display: contents;
+}
+
+#display #previousOutput {
+    line-height: 150%;
+    border-radius: 20px 20px 0 0;
+    background-color: rgba(0, 0, 0, 0.25);
+    color: black;
+    padding-left: 20px;
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 0.75);
+    font-style: italic;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: scroll;
+    overflow-y: auto;
+    overflow-x: hidden;
+    white-space: pre-wrap;
+}
+
+#display #displayOutput {
+    text-align: right;
+    background-color: rgba(0, 0, 0, 0.25);
+    color: black;
+    padding-top: 10px;
+    padding-right: 20px;
+    font-size: 2.5rem;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: scroll;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* KEYBOARD*/
+#keyboard {
+    display: contents;
+}
+
+.operand, 
+.signOperator, 
+.operator{
+    font-size: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    border: none
+}
+
+.operand:hover, 
+.signOperator:hover, 
+.operator:hover{
+    filter: brightness(90%);
+}
+
+.operand {
+ background: slategray;
+}
+
+.signOperator {
+    background: orange;
+}
+
+.operator {
+    background: rgb(137, 164, 199);
+}
+
+#Back {
+    font-size: 43px;
+}
+
+#divide {
+    border-radius: 0 0 20px 0;
+}
+
+#zero {
+    border-radius: 0 0 0 20px;
+}
+
+/* FOOTER */ 
+#footer {
+    display: inline-flex;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#footer p {
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.error{
+    animation-name: errorAnimation;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;    
+    animation-play-state: running;
+}
+
+@keyframes errorAnimation {
+    0%  {background-color: rgba(0, 0, 0, 0.25);}
+    50% {background-color: rgba(0, 0, 0, 0.30);}
+    100%  {background-color: rgba(0, 0, 0, 0.25);}
+}
+
+@media (max-height: 900px) {
+    body {
+        grid-template-rows: 1fr 20%;
+        grid-template-areas: 
+        "keypad"
+        "footer";
+    }
+
+    #calculator {
+        margin: auto;
+        display: grid;
+        grid-template-rows: repeat(7, 80px);
+        grid-template-columns: repeat(4, 80px);
+        grid-template-areas: 
+        "previousOutput previousOutput previousOutput previousOutput"
+        "displayOutput displayOutput displayOutput displayOutput"
+        "openBracket closeBracket Back Clear"
+        "seven eight nine add"
+        "four five six subtract"
+        "one two three multiply"
+        "zero dec equal divide";
+    }
+
+    #display #previousOutput {
+        font-size: 1.0rem;
+    }
+    
+    #display #displayOutput {
+        font-size: 2.0rem;
+    }
+
+    .operand, 
+    .signOperator, 
+    .operator{
+        font-size: 25px;
+        font-weight: 600;
+    }
+
+    #Back {
+        font-size: 33px;
+    }
+}
