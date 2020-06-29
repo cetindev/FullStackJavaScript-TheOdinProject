@@ -38,7 +38,6 @@ sonra grid-template-areas ile bunların yerlerini belirledik yani sıraladık. �
 
 */
 /* CALCULATOR */
-/* CALCULATOR */
 #calculator {
   margin: auto;
   display: grid;
@@ -53,6 +52,7 @@ sonra grid-template-areas ile bunların yerlerini belirledik yani sıraladık. �
   "one two three multiply"
   "zero dec equal divide";
 }
+
 /*Şekil itibari ile konumlandırdıkdan sonra bunlara grid-area lara değer verdik*/
 #previousOutput {grid-area: previousOutput;}
 
