@@ -12,4 +12,3 @@ function divide(firs,last) {
   return firs / last;
 }
 
-const 
