@@ -1,0 +1,14 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+}
+.box {
+  background-color: bisque;
+  padding: 30px;
+}
+.box:nth-child(odd) {
+  background-color: blue;
+  color: #fff;
+
+}
