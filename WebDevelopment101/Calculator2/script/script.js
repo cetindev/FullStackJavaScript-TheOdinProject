@@ -90,7 +90,48 @@ function clicked() {
       lastVal = this.value;
       numVal = 0;
       break;
-
+  case "number":
+    if(calculated != 0) clear();
+    if(numVal == 15 || (displayResult.innerHTML.indexOf(".") != -1 && this.value == ".")) break;
+    displayResult.innerHTML += this.value;
+    lastVal = this.value;
+    numVal++;
+    break;
+  case "clear":
+    clear();
+    break;      
+  case "backspace":
+    backspace(displayResult);
+      numVal--;
+      break;
+  case "equal":
+    if(values.length < 2 && displayResult.innerHTML == "") break;
+    values[values.length] = displayResult.innerHTML;
+    if(values.length == operations.length) backspace(displayExpression);
+    let result = 0;
+    let o = 0;
+    calculate++;
+    console.log(operations);
+    console.log(values);
+    let temp1 = operations.length;
+    for(let i = 0; i < temp1 ; i++) {
+      if (operations.indexOf("x") != -1 ) {
+        calculate("x");
+      }
+      else if (operations.indexOf("÷") != -1) {
+        calculate("÷");
+      }
+      else if (operations.indexOf("+") != -1) {
+        calculate("+");
+      }
+      else if(operations.indexOf("-") != -1) {
+        calculate("-");
+      }
+    }
+    result = values[0];
+    displayExpression.innerHTML += displayResult.innerHTML + this.value;
+    displayResult.innerHTML = result;
+    break;
   }
 }
 
