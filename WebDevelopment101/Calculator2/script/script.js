@@ -48,4 +48,49 @@ function backspace(from) {
   if(from == displayExpression) operations.pop();
 }
 
-function 
+function clear() {
+  displayExpression.innerHTML = "";
+  displayResult.innerHTML = "";
+  lastVal = null;
+  values = [];
+  calculated = 0;
+}
+function num(n) {
+  /*Burdaki Number.EPSILON nedemek nedir */
+  return Math.round((Number(n) + Number.EPSILON) * 100) / 100;
+}
+
+function calculate(op) {
+  let opi = operations.indexOf(op);
+  let a = num(values[opi]);
+  let b = num(values[opi + 1]);
+  let res = operate(a, b, op);
+  operations.splice(opi, 1);
+  values.splice(opi, 2, res);
+  console.log(res);
+  console.log(operations);
+  console.log(values);
+}
+function clicked() {
+  switch (this.className) {
+    case "operator":
+      if(lastVal == this.value) break;
+      if(lastVal == "+" || lastVal == "x" || lastVal == "-" || lastVal == "+") {
+        backspace(displayExpression);
+        displayExpression.innerHTML += this.value;
+        operations[operations.length] = this.value;
+        lastVal = this.value;
+        break;
+      }
+      if(calculated != 0) displayExpression.innerHTML = "";
+      values[values.length] = displayResult.innerHTML;
+      operations[operations.length] = this.value;
+      displayExpression.innerHTML += displayResult.innerHTML + this.value;
+      displayResult.innerHTML = "";
+      lastVal = this.value;
+      numVal = 0;
+      break;
+
+  }
+}
+
