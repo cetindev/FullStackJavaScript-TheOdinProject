@@ -1,3 +1,4 @@
+//DOM Elementelerini variable'a attık bu variable'dan istenilen buton veya elemente erişiliebilir
 const buttons = document.querySelector("#buttons");
 const numberButtons = buttons.querySelectorAll(".number");
 const operatorButtons = buttons.querySelectorAll(".operator");
@@ -12,7 +13,7 @@ let numVal = 0;
 let values = [];
 let operations = [];
 let calculated = 0;
-
+//Butonları dinleme fonk. addEventListener
 operatorButtons.forEach(button => button.addEventListener("click", clicked));
 numberButtons.forEach(button => button.addEventListener("click", clicked));
 clearButton.addEventListener("click", clicked);
@@ -24,7 +25,7 @@ window.addEventListener('keydown', function (e) {
 });
 
 
-
+//4 işlemin olduğu fonksiyonlar
 function add(...arr) {
   return arr.reduce((total, current) => total += current);
 }
@@ -40,23 +41,26 @@ function mul(...arr) {
 function div(...arr) {
   return arr.reduce((total, current) => total /= current);
 }
-
+//Seşilen operatör yani işlem ve a ve sayıları 
 function operate(a, b, op) {
   let fun = (op == "+") ? add :
     (op == "−") ? sub :
       (op == "×") ? mul : div;
+      //Eğer 0'a bölmek istenilirse hata mesajı verir
   if (op == "÷" && (b == "0" || b == 0)) {
     clear();
-    alert("Divided by 0? Huh.")
+    alert("Dividing a number by 0 becomes infinity")
   }
   return fun(a, b);
 }
-
+//backspace  fonksiyonunda displayExpression elementindeki yani işlemlerin gösterildiği yerdir.
+//Ayrıca burdaki fonk. slice fonk. ile alınan 0 indexden -12e kadar olan yere kadar kısmı from.innerHTML'e atıyor ve if ile displayExpression ile aynıysa
+//operations.pop() luyor
 function backspace(from) {
   from.innerHTML = from.innerHTML.slice(0, -1);
   if (from == displayExpression) operations.pop();
 }
-
+//C yani clear yapılmak istenirse bütün şeyler siliniyor
 function clear() {
   displayExpression.innerHTML = "";
   displayResult.innerHTML = "";
@@ -66,11 +70,12 @@ function clear() {
   operations = [];
   calculated = 0;
 }
-
+//???????
 function num(n) {
   return Math.round((Number(n) + Number.EPSILON) * 100) / 100;
 }
-
+//Seçilen işleme göre yani "op" değerine hangi işlem secilmiş onu alıyor  
+//pek anlamadım
 function calculate(op) {
   let opi = operations.indexOf(op);
   let a = num(values[opi]);
