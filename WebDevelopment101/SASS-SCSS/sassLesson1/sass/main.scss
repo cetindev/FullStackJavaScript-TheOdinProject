@@ -88,3 +88,40 @@ $size: 1000px;
   transition: 500ms all;
   color: red;
 } 
+
+//Sass veScss if else 
+$size: 7;
+$padding: 10px;
+$black: black;
+$white: white;
+$crimson: crimson;
+$blue: blue;
+
+p {
+  @if $size == 6 {
+    background-color: $black;
+    padding: $padding;
+    color: $white;
+  }
+  @else if ($size <= 2) {
+    background-color: $white;
+    padding: $padding;
+    color: $black;
+  }
+  @else {
+    background-color: $blue;
+    padding: $padding;
+    color: $white;
+  }
+}
+//ders7 for döngüsü burda i değişkeni yapıyoruz
+//sonra 1 den 5 e kadar olduğunu yazdık sonra içindeki
+//elemana bunlara döndürüyoruz
+@for $i from 1 through 5 {
+  .item-#{$i} {
+    width: 100px * $i;
+    padding: 5px * $i;
+    background-color: white;
+    margin-bottom: 10px;
+  }
+}

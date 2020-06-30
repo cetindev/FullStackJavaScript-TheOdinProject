@@ -82,3 +82,38 @@ $size: 1000px;
   text-decoration: underline;
   transition: 500ms all;
   color: red; }
+
+p {
+  background-color: blue;
+  padding: 10px;
+  color: white; }
+
+.item-1 {
+  width: 100px;
+  padding: 5px;
+  background-color: white;
+  margin-bottom: 10px; }
+
+.item-2 {
+  width: 200px;
+  padding: 10px;
+  background-color: white;
+  margin-bottom: 10px; }
+
+.item-3 {
+  width: 300px;
+  padding: 15px;
+  background-color: white;
+  margin-bottom: 10px; }
+
+.item-4 {
+  width: 400px;
+  padding: 20px;
+  background-color: white;
+  margin-bottom: 10px; }
+
+.item-5 {
+  width: 500px;
+  padding: 25px;
+  background-color: white;
+  margin-bottom: 10px; }
