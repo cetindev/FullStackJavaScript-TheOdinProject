@@ -8,14 +8,14 @@ const displayExpression = document.querySelector("#expression");
 const displayResult = document.querySelector("#result");
 const equalButton = document.querySelector(".equal");
 
-let lastVal,numVal = 0, values = [] , operations = [] , calculated =0;
+let lastVal, numVal = 0, values = [], operations = [], calculated = 0;
 
 operatorButtons.forEach(button => button.addEventListener('click', clicked));
 numberButtons.forEach(button => button.addEventListener('click', clicked));
 clearButton.addEventListener('click', clicked);
 backspaceButton.addEventListener("click", clicked);
 equalButton.addEventListener("click", clicked);
-window.addEventListener('keydown', function(e) {
+window.addEventListener('keydown', function (e) {
   const key = document.querySelector(`button[data-key='${e.keyCode}']`);
   key.click();
 });
@@ -34,9 +34,9 @@ function div(...arr) {
 }
 
 function operate(a, b, op) {
-  let fun = (op == "+") ? add:
-  (op == "-") ? sub:
-  (op == "*" || (op == "x") ) ? mul:div;
+  let fun = (op == "+") ? add :
+    (op == "-") ? sub :
+      (op == "*" || (op == "x")) ? mul : div;
   if ((op == "÷" || (op == "/")) && (b == "0" || b == 0)) {
     clear();
     alert("You can't divide a number by 0");
@@ -45,7 +45,7 @@ function operate(a, b, op) {
 }
 function backspace(from) {
   from.innerHTML = frominnerHTML.slice(0, -1);
-  if(from == displayExpression) operations.pop();
+  if (from == displayExpression) operations.pop();
 }
 
 function clear() {
@@ -74,15 +74,15 @@ function calculate(op) {
 function clicked() {
   switch (this.className) {
     case "operator":
-      if(lastVal == this.value) break;
-      if(lastVal == "+" || lastVal == "x" || lastVal == "-" || lastVal == "+") {
+      if (lastVal == this.value) break;
+      if (lastVal == "+" || lastVal == "x" || lastVal == "-" || lastVal == "+") {
         backspace(displayExpression);
         displayExpression.innerHTML += this.value;
         operations[operations.length] = this.value;
         lastVal = this.value;
         break;
       }
-      if(calculated != 0) displayExpression.innerHTML = "";
+      if (calculated != 0) displayExpression.innerHTML = "";
       values[values.length] = displayResult.innerHTML;
       operations[operations.length] = this.value;
       displayExpression.innerHTML += displayResult.innerHTML + this.value;
@@ -90,48 +90,48 @@ function clicked() {
       lastVal = this.value;
       numVal = 0;
       break;
-  case "number":
-    if(calculated != 0) clear();
-    if(numVal == 15 || (displayResult.innerHTML.indexOf(".") != -1 && this.value == ".")) break;
-    displayResult.innerHTML += this.value;
-    lastVal = this.value;
-    numVal++;
-    break;
-  case "clear":
-    clear();
-    break;      
-  case "backspace":
-    backspace(displayResult);
+    case "number":
+      if (calculated != 0) clear();
+      if (numVal == 15 || (displayResult.innerHTML.indexOf(".") != -1 && this.value == ".")) break;
+      displayResult.innerHTML += this.value;
+      lastVal = this.value;
+      numVal++;
+      break;
+    case "clear":
+      clear();
+      break;
+    case "backspace":
+      backspace(displayResult);
       numVal--;
       break;
-  case "equal":
-    if(values.length < 2 && displayResult.innerHTML == "") break;
-    values[values.length] = displayResult.innerHTML;
-    if(values.length == operations.length) backspace(displayExpression);
-    let result = 0;
-    let o = 0;
-    calculate++;
-    console.log(operations);
-    console.log(values);
-    let temp1 = operations.length;
-    for(let i = 0; i < temp1 ; i++) {
-      if (operations.indexOf("x") != -1 ) {
-        calculate("x");
+    case "equal":
+      if (values.length < 2 && displayResult.innerHTML == "") break;
+      values[values.length] = displayResult.innerHTML;
+      if (values.length == operations.length) backspace(displayExpression);
+      let result = 0;
+      let o = 0;
+      calculated++;
+      console.log(operations);
+      console.log(values);
+      let temp1 = operations.length;
+      for (let i = 0; i < temp1; i++) {
+        if (operations.indexOf("x") != -1) {
+          calculate("x");
+        }
+        else if (operations.indexOf("÷") != -1) {
+          calculate("÷");
+        }
+        else if (operations.indexOf("+") != -1) {
+          calculate("+");
+        }
+        else if (operations.indexOf("-") != -1) {
+          calculate("-");
+        }
       }
-      else if (operations.indexOf("÷") != -1) {
-        calculate("÷");
-      }
-      else if (operations.indexOf("+") != -1) {
-        calculate("+");
-      }
-      else if(operations.indexOf("-") != -1) {
-        calculate("-");
-      }
-    }
-    result = values[0];
-    displayExpression.innerHTML += displayResult.innerHTML + this.value;
-    displayResult.innerHTML = result;
-    break;
+      result = values[0];
+      displayExpression.innerHTML += displayResult.innerHTML + this.value;
+      displayResult.innerHTML = result;
+      break;
   }
 }
 
