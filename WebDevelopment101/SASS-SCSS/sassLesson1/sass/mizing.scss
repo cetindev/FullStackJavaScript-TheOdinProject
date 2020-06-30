@@ -1,0 +1,7 @@
+//Ders3 mixin'ler
+@mixin border-radius($par) {
+  -o-border-border-radius: $par;
+  -moz-border-radius: $par;
+  -webkit-border-radius: $par;
+  border-radius: $par;
+}

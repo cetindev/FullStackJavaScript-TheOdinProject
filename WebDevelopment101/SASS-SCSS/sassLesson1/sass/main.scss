@@ -1,3 +1,7 @@
+//ders6 import (dahil etme)
+@import "reset.scss";
+@import "mizing.scss";
+
 /*
 //scss deki değişken yapıları
 $degisken-adi: blue;
@@ -9,82 +13,78 @@ $size: 1000px;
   color: white;
  }
  */
+//ders5 miras alma extend
+.egim {
+  transition: 300ms all;
+  //bu özelliği 
+  //@extend .egim    şeklinde kullanılabilinir
+}
+
+//Ders4 İçiçe birleştirme yöntemi nesting yöntemi
+
+
+
+
  //Ders2 login sayfası
  
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  box-sizing: border-box;
-}
-a {
-  text-decoration: none;
-}
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 
-  Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 14px;
-  font-weight: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  flex-direction: column; //çocukları columnlara bölüyor 
-  background-color: royalblue;
-}
+
 .container {
     width: 400px;
     background-color: white;
-    border-radius: 3px;
+    @include border-radius(3px);
     padding: 30px  ;
     margin: 30px;
-}
-.login-header {
+
+  .login-header {
   font-size: 24px;
   text-transform: uppercase;
   margin-bottom: 30px;
-}
-.login-content {
+  }
+  .login-content {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
-}
-.login-content input{
-  height: 50px;
-  padding: 0px 20px;//sağdan soldan 20 px, ve aşagıdan yukarıdan 0px boşluk bırakıyoruz
-  border: 2px solid rgb(202, 202, 202);
-  margin-bottom: 20px;
-}
-.login-footer {
+    & input{
+    height: 50px;
+    padding: 0px 20px;//sağdan soldan 20 px, ve aşagıdan yukarıdan 0px boşluk bırakıyoruz
+    border: 2px solid rgb(202, 202, 202);
+    margin-bottom: 20px;
+    }
+  }
+
+  .login-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.login-footer a {
-  color: rgb(160, 160, 160);
-  transition: 300ms all;
-}
-.login-footer a:hover {
-  color: black;
-}
-.login-footer a:first-child {
-  background-color: royalblue;
-  width: 90px;
-  height: 40px;
-  text-align: center;
-  line-height: 40px;
-  color: white;
-  border-radius: 3px;
-  transition: 300ms all;
-}
-.login-footer a:first-child:hover {
-  background-color: black;
+
+    & a {
+    color: rgb(160, 160, 160);
+    @extend .egim;
+      &:hover {
+      color: black;
+      }
+      &:first-child {
+        background-color: royalblue;
+        width: 90px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        color: white;
+        border-radius: 3px;
+        @extend .egim;
+      }
+      &:first-child:hover {
+        background-color: black;
+      }
+    }
+  }
 }
 .signup a {
   display: block;
   color: white;
-  transition: 300ms all ;
 }
 .signup a:hover {
   text-decoration: underline;
+  transition: 500ms all;
+  color: red;
 } 
