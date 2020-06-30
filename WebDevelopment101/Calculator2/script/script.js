@@ -3,7 +3,7 @@ const buttons = document.querySelector("#buttons");
 const numberButtons = buttons.querySelectorAll(".number");
 const operatorButtons = buttons.querySelectorAll(".operator");
 const clearButton = document.querySelector(".clear");
-const backspaceButton = document.querySelector(".backspaca");
+const backspaceButton = document.querySelector(".backspace");
 const displayExpression = document.querySelector("#expression");
 const displayResult = document.querySelector("#result");
 const equalButton = document.querySelector(".equal");
@@ -32,3 +32,20 @@ function mul(...arr) {
 function div(...arr) {
   return arr.reduce((total, current) => total /= current);
 }
+
+function operate(a, b, op) {
+  let fun = (op == "+") ? add:
+  (op == "-") ? sub:
+  (op == "*" || (op == "x") ) ? mul:div;
+  if ((op == "÷" || (op == "/")) && (b == "0" || b == 0)) {
+    clear();
+    alert("You can't divide a number by 0");
+  }
+  return fun(a, b);
+}
+function backspace(from) {
+  from.innerHTML = frominnerHTML.slice(0, -1);
+  if(from == displayExpression) operations.pop();
+}
+
+function 
