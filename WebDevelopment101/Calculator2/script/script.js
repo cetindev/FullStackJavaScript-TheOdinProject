@@ -46,7 +46,7 @@ function operate(a, b, op) {
   let fun = (op == "+") ? add :
     (op == "−") ? sub :
       (op == "×") ? mul : div;
-      //Eğer 0'a bölmek istenilirse hata mesajı verir
+  //Eğer 0'a bölmek istenilirse hata mesajı verir
   if (op == "÷" && (b == "0" || b == 0)) {
     clear();
     alert("Dividing a number by 0 becomes infinity")
@@ -87,7 +87,7 @@ function calculate(op) {
   console.log(operations);
   console.log(values);
 }
-
+//eğer bu belli butonlardan yani buttnos mu operator mu vs. basılırsa neler olur switch ile kara alınıyor
 function clicked() {
   switch (this.className) {
     case "operator":
