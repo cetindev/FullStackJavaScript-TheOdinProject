@@ -86,10 +86,11 @@
     &-heading a:hover {
       transform: translateY(-3px);
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+      color: $black-color;
     }
     &-heading a:hover::after {
       transform: scale(1.3);
-      background-color: white;
+      color: $black-color;
       opacity: 0  ;
     }
     &-heading a:active {
