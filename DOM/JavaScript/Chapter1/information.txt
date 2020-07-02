@@ -1,0 +1,37 @@
+async;
+script şeklinde çağırdığımız kodları async'de eklersek 
+eğer başka bir javaScript kod .js uzantılı dosya varsa birbirlerini 
+beklemiyorlar ve birbirleriyle alakalı değildir.
+kullanımı
+<script src= "main.js" async ></script> 
+şeklindedir.
+Scriptleri body'nin en altına yazılması daha iyidir .
+defer;
+async gibi aynı yere yazılır,kodu sayfa yüklendikden sonra 
+yükler.Yani body'nin altına yazmışız gibi bir şey oluyor .
+Yani defer'un anlamı önce sayfa render et(yükle) sonra defer'u yazdığın
+kod belgesini render et.
+
+JS case-sensitivity bir dildir.
+Yani büyük küçük harf hassasiyeti vardir.
+
+var -varible(değişken)
+const - constant(sabit)
+let -(izin ver)
+
+Js'de harf ve _ $ ile başlar sadece.
+DataTypes;
+condole.log(typeof degisken-adi);
+
+Null vs undefined
+undefined: Bir değişken oluşturuldu ama ='in karşısına bir şey yazılmadı ise yani bir
+ değer verilmemiş (initialized)ise undefined oluyor.
+Null:
+Mantıken null değeri memory'de  bir tane boş bir objeye takabül eder.Boş bir objeye
+takabül ettiği için typeof çıktısı object olarak döner.
+
+NaN: Açılımı Not a Number yani sayı olmaya anlamına gelir.
+       
+
+Eğer typeof a --> çalışır bir operatör gibi çalışır
+ayrıa typeof(a) --> da çalışır bir fonksiyon gibi de çalışır .
