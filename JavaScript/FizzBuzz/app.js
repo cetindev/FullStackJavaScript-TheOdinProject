@@ -24,6 +24,7 @@ rl.question("Lütfen Üst Sınırınızı Giriniz: ", function (answer) {
   process.exit(0);
 });
 
+
 /* const prompt = require("node_modules/")
 let answer = parseInt(prompt("Bir Sayı gir : "));
 
