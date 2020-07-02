@@ -261,4 +261,4 @@ keyPressed = (key) => {
 }
 
 let wrapper = document.querySelector('.wrapper');
-wrapper.addEventListener('click', keyPressed);
+wrapper.addEventListener('click', keyPressed);  
