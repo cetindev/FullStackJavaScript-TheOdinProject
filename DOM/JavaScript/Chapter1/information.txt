@@ -36,4 +36,4 @@ NaN: Açılımı Not a Number yani sayı olmaya anlamına gelir.
 Eğer typeof a --> çalışır bir operatör gibi çalışır
 ayrıca typeof(a) --> da çalışır bir fonksiyon gibi de çalışır .
 
-  
+   
