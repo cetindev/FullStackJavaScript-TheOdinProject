@@ -1,0 +1,1 @@
+let answer = parseInt(prompt("Lütfen Üst Sınırı Giriniz: "));
