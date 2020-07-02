@@ -12,41 +12,51 @@
 
 <body>
   <div class="calculator">
-    <div class="scree">
+    <div class="screen">
       <div class="result">
-
+        0
       </div>
-      <div class="body">
-        <div class="row">
-          <div class="key">7</div>
-          <div class="key">8</div>
-          <div class="key">9</div>
-          <div class="key operator">/</div>
-        </div>
-        <div class="row">
-          <div class="key">4</div>
-          <div class="key">5</div>
-          <div class="key">6</div>
-          <div class="key operator">x</div>
-        </div>
-        
-        <div class="row">
-          <div class="key">1</div>
-          <div class="key">2</div>
-          <div class="key">3</div>
-          <div class="key operator">-</div>
-        </div>
-        
-        <div class="row">
-          <div class="key backspace">⌫</div>
-          <div class="key">0</div>
-          <div class="key operator">=</div>
-          <div class="key operator">+</div>
-        </div>
+      <div class="operations">
+        <!-- 
+        <span class="number">122</span>
+        <span class="operator">+</span>
+        <span class="number">1</span>
+        -->
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="row">
+        <div class="key" data-key="CE">CE</div>
+        <div class="key" data-key="C">C</div>
+        <div class="key" data-key="%">%</div>
+        <div class="key operator" data-key="÷">÷</div>
+      </div>
+      <div class="row">
+        <div class="key" data-key="1">1</div>
+        <div class="key" data-key="2">2</div>
+        <div class="key" data-key="3">3</div>
+        <div class="key operator" data-key="×">×</div>
+      </div>
+      <div class="row">
+        <div class="key" data-key="4">4</div>
+        <div class="key" data-key="5">5</div>
+        <div class="key" data-key="6">6</div>
+        <div class="key operator" data-key="+">+</div>
+      </div>
+      <div class="row">
+        <div class="key" data-key="7">7</div>
+        <div class="key" data-key="8">8</div>
+        <div class="key" data-key="9">9</div>
+        <div class="key operator" data-key="-">-</div>
+      </div>
+      <div class="row">
+        <div class="key" data-key=".">.</div>
+        <div class="key" data-key="0">0</div>
+        <div class="key backspace" data-key="⌫">⌫</div>
+        <div class="key operator" data-key="=">=</div>
       </div>
     </div>
   </div>
-
   <script src="js/app.js"></script>
 </body>
 
