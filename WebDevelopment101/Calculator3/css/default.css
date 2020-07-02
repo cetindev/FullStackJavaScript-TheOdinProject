@@ -25,9 +25,9 @@ body, html {
   height: 100%;
   display: flex;
   flex-direction: column;
-/*   background-color: #000;
- */
+  background: #000;
 }
+
 .calculator .screen {
   display: flex;
   flex-direction: column;
@@ -36,9 +36,9 @@ body, html {
   box-sizing: border-box;
 }
 
-.calculator .result {
+.screen .result {
   display: flex;
-  float: 0 0 70%;
+  flex: 0 0 70%;
   align-items: center;
   justify-content: flex-end;
   font-size: 3rem;
@@ -53,16 +53,17 @@ body, html {
   justify-content: flex-end;
   color: firebrick;
 }
+
 .operations span {
   margin-left: 8px;
   font-size: 1.3rem;
-} 
+}
 
-.operations span.number {
+.operations span.number{
   color: #f9f9f9;
 }
 
-.operations span.operations {
+.operations span.operator{
   color: #3effa3;
 }
 
@@ -78,7 +79,8 @@ body, html {
   display: flex;
   flex: 1;
 }
-.row .key {
+
+.row .key{
   flex: 1;
   display: flex;
   justify-content: center;
@@ -88,9 +90,10 @@ body, html {
   font-size: 1.4rem;
 }
 
-.row .key .operations {
+.row .key.operator{
   color: #3effa3;
 }
-.row .key .backspace {
+
+.row .key.backspace{
   color: #fff73b;
 }
