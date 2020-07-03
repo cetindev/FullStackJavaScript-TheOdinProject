@@ -91,3 +91,18 @@ console.log(sum(0, 1, 2, 3, 4)); // 6
 console.log(); // 0
  */
 
+/* ES6: Dizileri Yerinde Değerlendirmek için Yayım İşlecini Kullanma
+ES6 , çoklu parametrelerin veya öğelerin beklendiği yerlerde dizileri ve diğer ifadeleri genişletmemizi sağlayan forma operatörünü sunar .
+
+Aşağıdaki ES5 kodu apply(), bir dizideki maksimum değeri hesaplamak için kullanılır:
+
+var arr = [6, 89, 3, 45];
+var maximus = Math.max.apply(null, arr); // returns 89
+Kullanmak zorundaydık Math.max.apply(null, arr)çünkü Math.max(arr)geri döndü NaN. Math.max()virgülle ayrılmış bağımsız değişkenler bekler, ancak bir dizi beklemez. Forma operatörü bu sözdizimini okumayı ve sürdürmeyi çok daha iyi hale getirir.
+
+const arr = [6, 89, 3, 45];
+const maximus = Math.max(...arr); // returns 89
+...arrambalajsız bir dizi döndürür. Başka bir deyişle, diziyi yayar . Ancak, yayılma işleci yalnızca bir işleve bağımsız değişken veya dizi değişmezinde olduğu gibi yerinde çalışır. Aşağıdaki kod çalışmaz:
+
+const spreaded = ...arr; // will throw a syntax error
+ */
