@@ -39,7 +39,7 @@ if (dizi[5] == s) {
 } */
 
 //Öteleme
-const s = [5, 7, 2];
+/* const s = [5, 7, 2];
 let array = [];
 function editInPlace() {
   'use strict';
@@ -51,7 +51,7 @@ function editInPlace() {
   s[i] = array[i];
   console.log(array);
 }
-editInPlace();
+editInPlace(); */
 /* ES6: Nesne Mutasyonunu Önle
 Önceki meydan okumada görüldüğü gibi, consttek başına beyan, verilerinizi mutasyondan gerçekten korumaz.
 Verilerinizin değişmemesini sağlamak için JavaScript, Object.freezeveri değişimini önlemek için bir işlev sağlar .
@@ -146,3 +146,15 @@ Nesneden istediğiniz kadar çok veya az değer ayıklayabilirsiniz.
 const { today: { low: lowToday, high: highToday } } = LOCAL_FORECAST;
 // Only change code above this line
 */
+
+const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+function removeFirstTwo(list) {
+  "use strict";
+  // change code below this line
+  const [a, b, ...arr] = list;
+  // change code above this line
+  return arr;
+}
+const arr = removeFirstTwo(source);
+console.log(arr); // should be [3,4,5,6,7,8,9,10]
+console.log(source); // should be [1,2,3,4,5,6,7,8,9,10];
