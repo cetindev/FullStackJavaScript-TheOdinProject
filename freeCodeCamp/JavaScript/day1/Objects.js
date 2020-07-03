@@ -173,7 +173,7 @@ console.log(myObject[variable]);
 console.log(myObject);
  */
 
-const playerOne = {
+/* const playerOne = {
   name: "tim",
   marker: "X"
 }
@@ -286,16 +286,16 @@ me.name = 'Matthew'; // "name" is a property set on "me", but not on "person"
 me.isHuman = true; // inherited properties can be overwritten
 
 me.printIntroduction();
-// expected output: "My name is Matthew. Am I human? true"
-console.log('******************************************************');
+// expected output: "My name is Matthew. Am I human? true" */
+/* console.log('******************************************************');
 function Student() {
 
 }
 EighthGrader.prototype.sayName = function () {
-  console.log(this.name)
+  return console.log(this.name)
 }
 EighthGrader.prototype.age = function () {
-  console.log(this.age)
+  return console.log(this.age)
 }
 function EighthGrader(name, age) {
   this.name = name;
@@ -306,8 +306,25 @@ EighthGrader.prototype = Object.create(Student.prototype)
 const carl = new EighthGrader("Cihat SAlik", 8)
 carl.sayName() // console.logs "carl"
 carl.age() // 8
-console.dir(Function.prototype);
+console.dir(Function.prototype); */
 
 console.log('******************************************************');
 
+
+function User(name, yas) {
+  this.name = name;
+  this.yas = yas
+  console.log('User Sınıfına Girdiniz....');
+}
+User.prototype.getFullName = function (name) {
+  return `Merhabalar ${this.name} hosgeldin.`;
+}
+User.prototype.age = function (yas) {
+  return `Yaşınız ${this.yas} .`;
+}
+var user = new User('Cihat SAlik', 20);
+console.log(user.getFullName() + " " + user.age());
+
+var user2 = new User('Kadir Alkan', 34);
+console.log(user2.getFullName() + " " + user2.age());
 
