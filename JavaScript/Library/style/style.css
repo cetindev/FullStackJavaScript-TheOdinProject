@@ -15,6 +15,8 @@ body {
   /* align-items: center; */
   justify-content: center;
   height: 100vh;
+  background: url(https://ae01.alicdn.com/kf/HTB1ADwmSXXXXXcIapXXq6xXFXXXO.jpg_q50.jpg);
+  color: aliceblue;
 }
 .container {
   display: grid;
@@ -24,9 +26,10 @@ body {
   display: flex;
   justify-content: center;
   padding: 10px;
-  font-size:40px;
+  font-size:64px;
   font-style: normal;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, bolt;
 
 }
 .content {
@@ -40,7 +43,8 @@ body {
   grid-template-rows: 0.08fr 1fr;
   grid-template-areas: 'existingBooks booksToRead'
                        'existingBookList readBookList'   ;
-  border: 1px solid black;                       
+  border: 5px solid whitesmoke;            
+  height: 100vh;           
 }
 .existingBooks {
   font-size: 24px;
@@ -49,7 +53,7 @@ body {
   display: flex;
   justify-content: center;
   grid-area: existingBooks;
-    border: 1px solid black;
+    border: 5px solid whitesmoke;
 }
 .booksToRead {
   font-size: 24px;
@@ -58,7 +62,13 @@ body {
   display: flex;
   justify-content: center;
   grid-area: booksToRead;
-  border: 1px solid black;
+  border: 5px solid whitesmoke;
+}
+.existingBooksTitle {
+  font-size: 36px;
+}
+.booksToReadTitle {
+  font-size: 36px;
 }
 .existingBookList {
   font-size: 24px;
@@ -69,7 +79,7 @@ body {
   grid-area: existingBookList;
   padding-bottom: 5px;
   margin: 5px;
-  border: 1px solid black;
+  border: 5px solid whitesmoke;
 }
 .readBookList {
   font-size: 24px;
@@ -80,7 +90,7 @@ body {
   grid-area: readBookList;
   padding-bottom: 5px;
   margin: 5px;
-  border: 1px solid black;
+  border: 5px solid whitesmoke;
 }
 
 /* .existingBookList {
