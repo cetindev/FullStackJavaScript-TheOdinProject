@@ -288,27 +288,29 @@ me.isHuman = true; // inherited properties can be overwritten
 me.printIntroduction();
 // expected output: "My name is Matthew. Am I human? true" */
 /* console.log('******************************************************');
-function Student() {
-
-}
-EighthGrader.prototype.sayName = function () {
-  return console.log(this.name)
-}
-EighthGrader.prototype.age = function () {
-  return console.log(this.age)
-}
-function EighthGrader(name, age) {
+function Student(name, age) {
+  console.log('Student Sınıfı');
   this.name = name;
   this.age = age;
 }
 
-EighthGrader.prototype = Object.create(Student.prototype)
-const carl = new EighthGrader("Cihat SAlik", 8)
+Student.prototype.sayName = function (name) {
+  return console.log(`Merhaba Hogeldin ${this.name}.`);
+}
+Student.prototype.age = function (age) {
+  return console.log(`Yaşınız ${this.age}'dir.`);
+}
+/* function Student(name, age) {
+  this.name = name;
+  this.age = age;
+} */
+// Student.prototype = Object.create(Student.prototype)
+/* const carl = new Student("Cihat SAlik", 8)
 carl.sayName() // console.logs "carl"
-carl.age() // 8
+// carl.age() // 8
 console.dir(Function.prototype); */
 
-console.log('******************************************************');
+/* console.log('******************************************************');
 
 
 function User(name, yas) {
@@ -327,4 +329,6 @@ console.log(user.getFullName() + " " + user.age());
 
 var user2 = new User('Kadir Alkan', 34);
 console.log(user2.getFullName() + " " + user2.age());
+ */
 
+ 
