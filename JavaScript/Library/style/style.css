@@ -23,32 +23,64 @@ body {
 .containerTitle {
   display: flex;
   justify-content: center;
-  width: 100%;
-  height: 100%;
-  background-color: red;
-  padding: 20px;
+  padding: 10px;
   font-size:40px;
   font-style: normal;
   box-sizing: border-box;
 
 }
 .content {
-  background-color: blue;
-  margin-top: 20px;
+  margin-top: 15px;
   display: grid;
   justify-content: center;
   /* flex: 1; */
   justify-content: space-around;
   height: 635px;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 0.08fr 1fr;
+  grid-template-areas: 'existingBooks booksToRead'
+                       'existingBookList readBookList'   ;
+  border: 1px solid black;                       
 }
-
-.subTitle {
+.existingBooks {
   font-size: 24px;
   padding-bottom: 5px;
   margin: 5px;
-  background-color: red;
+  display: flex;
+  justify-content: center;
+  grid-area: existingBooks;
+    border: 1px solid black;
+}
+.booksToRead {
+  font-size: 24px;
+  padding-bottom: 5px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  grid-area: booksToRead;
+  border: 1px solid black;
+}
+.existingBookList {
+  font-size: 24px;
+  padding-top: 5px;
+  display: flex;
+  padding-left: 10px;
+  justify-content: start;
+  grid-area: existingBookList;
+  padding-bottom: 5px;
+  margin: 5px;
+  border: 1px solid black;
+}
+.readBookList {
+  font-size: 24px;
+  padding-top: 5px;
+  display: flex;
+  padding-left: 10px;
+  justify-content: start;
+  grid-area: readBookList;
+  padding-bottom: 5px;
+  margin: 5px;
+  border: 1px solid black;
 }
 
 /* .existingBookList {
