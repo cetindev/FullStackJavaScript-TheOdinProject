@@ -177,20 +177,137 @@ const playerOne = {
   name: "tim",
   marker: "X"
 }
-
 const playerTwo = {
   name: "jenn",
   marker: "O"
 }
-
 function printName(player) {
   console.log(player.name);
 }
-
-function gameOver(winningPlayer){
+function gameOver(winningPlayer) {
   console.log("Congratulations!")
   console.log(winningPlayer.name + " is the winner!")
   // printName(playerTwo);
 }
 let kazanan = gameOver(playerTwo);
+console.log('******************************************************');
+function Player(name, marker) {
+  this.name = name
+  this.marker = marker
+  this.sayName = function () {
+    console.log(name);
+  }
+}
+// console.log(player.name) // 'steve'
+const player1 = new Player('steve', 'X');
+const player2 = new Player('also steve', 'O');
+player1.sayName();
+player2.sayName();
+console.log('******************************************************');
+function book(title, author, pages, read) {
+  this.info = function () {
+    console.log("trail");
+
+  }
+}
+const newBook = new book("The Hobbit", "J.R.R. Tolkien", 296, "no")
+newBook.info();
+console.log('******************************************************');
+
+let animal = {
+}
+animal.name = 'Leo'
+animal.energy = 10
+
+animal.eat = function (amount) {
+  console.log(`${this.name} is eating.`)
+  this.energy += amount
+}
+
+animal.sleep = function (length) {
+  console.log(`${this.name} is sleeping.`)
+  this.energy += length
+}
+
+animal.play = function (length) {
+  console.log(`${this.name} is playing.`)
+  this.energy -= length
+}
+console.log('******************************************************');
+
+function Animal(name, energy) {
+  let animal = {}
+  animal.name = name
+  animal.energy = energy
+
+  animal.eat = function (amount) {
+    console.log(`${this.name} is eating.`)
+    this.energy += amount
+  }
+
+  animal.sleep = function (length) {
+    console.log(`${this.name} is sleeping.`)
+    this.energy += length
+  }
+
+  animal.play = function (length) {
+    console.log(`${this.name} is playing.`)
+    this.energy -= length
+  }
+
+  return animal
+}
+
+const leo = Animal('Leo', 7)
+const snoop = Animal('Snoop', 10)
+console.log('******************************************************');
+function Student(name, grade) {
+  this.name = name
+  this.grade = grade
+}
+
+Student.prototype.sayName = function () {
+  console.log(this.name)
+}
+Student.prototype.goToProm = function () {
+  // eh.. go to prom?
+}
+
+console.log('******************************************************');
+const person = {
+  isHuman: false,
+  printIntroduction: function () {
+    console.log(`My name is ${this.name}. Am I human? ${this.isHuman}`);
+  }
+};
+const me = Object.create(person);
+
+me.name = 'Matthew'; // "name" is a property set on "me", but not on "person"
+me.isHuman = true; // inherited properties can be overwritten
+
+me.printIntroduction();
+// expected output: "My name is Matthew. Am I human? true"
+console.log('******************************************************');
+function Student() {
+
+}
+EighthGrader.prototype.sayName = function () {
+  console.log(this.name)
+}
+EighthGrader.prototype.age = function () {
+  console.log(this.age)
+}
+function EighthGrader(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+EighthGrader.prototype = Object.create(Student.prototype)
+const carl = new EighthGrader("Cihat SAlik", 8)
+carl.sayName() // console.logs "carl"
+carl.age() // 8
+console.dir(Function.prototype);
+
+console.log('******************************************************');
+
 
