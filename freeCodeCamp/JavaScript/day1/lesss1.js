@@ -146,7 +146,7 @@ Nesneden istediğiniz kadar çok veya az değer ayıklayabilirsiniz.
 const { today: { low: lowToday, high: highToday } } = LOCAL_FORECAST;
 // Only change code above this line
 */
-
+/* 
 const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 function removeFirstTwo(list) {
   "use strict";
@@ -158,3 +158,39 @@ function removeFirstTwo(list) {
 const arr = removeFirstTwo(source);
 console.log(arr); // should be [3,4,5,6,7,8,9,10]
 console.log(source); // should be [1,2,3,4,5,6,7,8,9,10];
+
+ */
+
+/* const myObject = {
+  property: 'trial!',
+  otherProperty: 77,
+  "obnoxious property": function () {
+    // do stuff!
+  }
+}
+const variable = 'property'
+console.log(myObject[variable]);
+console.log(myObject);
+ */
+
+const playerOne = {
+  name: "tim",
+  marker: "X"
+}
+
+const playerTwo = {
+  name: "jenn",
+  marker: "O"
+}
+
+function printName(player) {
+  console.log(player.name);
+}
+
+function gameOver(winningPlayer){
+  console.log("Congratulations!")
+  console.log(winningPlayer.name + " is the winner!")
+  // printName(playerTwo);
+}
+let kazanan = gameOver(playerTwo);
+
