@@ -53,14 +53,14 @@ function editInPlace() {
 }
 editInPlace();
 /* ES6: Nesne Mutasyonunu Önle
-Önceki meydan okumada görüldüğü gibi, consttek başına beyan, verilerinizi mutasyondan gerçekten korumaz. 
+Önceki meydan okumada görüldüğü gibi, consttek başına beyan, verilerinizi mutasyondan gerçekten korumaz.
 Verilerinizin değişmemesini sağlamak için JavaScript, Object.freezeveri değişimini önlemek için bir işlev sağlar .
 
 Nesne dondurulduktan sonra, artık nesne ekleyemez, güncelleyemez veya silemezsiniz.
  Nesneyi değiştirme girişimleri hatasız olarak reddedilecektir.
   */
-/* 
-//isaretler ile fonksiyonlar 
+/*
+//isaretler ile fonksiyonlar
 const magic = () => {
  "use strict";
  const tarih = new Date();
@@ -83,7 +83,7 @@ const increment = (number = 5, value = 1) => number + value;
 
 //istenilen sayı kadar girilen parametreler ile ve girilen parametreleri toplayan kod 
 //ve buna ortam hazırlayan sey ise ...args 'dir.Yani kaç adet parametre girdisi ayırt etmeksizin bütün parametreleri alır
-/* 
+/*
 const sum = (...args) => {
   return args.reduce((a, b) => a + b, 0);
 }
@@ -105,4 +105,33 @@ const maximus = Math.max(...arr); // returns 89
 ...arrambalajsız bir dizi döndürür. Başka bir deyişle, diziyi yayar . Ancak, yayılma işleci yalnızca bir işleve bağımsız değişken veya dizi değişmezinde olduğu gibi yerinde çalışır. Aşağıdaki kod çalışmaz:
 
 const spreaded = ...arr; // will throw a syntax error
+ */
+/*
+const arr1 = ["JAN", "FEB", "MAR", "APR", "MAY"];
+let arr2;
+(() => {
+  "use strict";
+  arr2 = [...arr1]; // change this line
+})();
+console.log(arr2);
+ */
+
+
+/*
+ES6: Nesnelerden Değerleri Ayıklamak için Yıkıcı Atamayı Kullanma
+Yıkım ataması , doğrudan bir nesneden alınan değerleri düzgün bir şekilde atamak için ES6'da sunulan özel bir sözdizimidir.
+
+Aşağıdaki ES5 kodunu göz önünde bulundurun:
+
+const user = { name: 'John Doe', age: 34 };
+
+const name = user.name; // name = 'John Doe'
+const age = user.age; // age = 34
+İşte ES6 yıkım sözdizimini kullanan eşdeğer bir atama ifadesi:
+
+const { name, age } = user;
+// name = 'John Doe', age = 34
+Burada nameve agedeğişkenleri usernesneden ilgili değerlerinin değerleri oluşturulur ve atanır . Bunun ne kadar temiz olduğunu görebilirsiniz.
+
+Nesneden istediğiniz kadar çok veya az değer ayıklayabilirsiniz.
  */
