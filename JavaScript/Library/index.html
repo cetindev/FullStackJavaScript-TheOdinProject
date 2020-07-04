@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Empy Project</title>
+  <title>Kütüphanem</title>
+  <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style/normalize.css">
   <link rel="stylesheet" href="style/style.css">
   <!-- ionicon -->
@@ -13,26 +14,45 @@
 
 <body>
   <!-- Html elements will be written here -->
-  <div class="container">
-    <div class="containerTitle">My Library</div>
+  <div class="container sorting">
+    <div class="containerTitle">Kütüphanem</div>
+    <div class="addBook">
+      <button type="submit" id="addBook">Kitap Ekle</button>
+    </div>
     <div class="content">
-      <div class="existingBooks subTitle">
-        <div class="existingBooksTitle">Existing Books</div>
+      <div class="existingBooks subTitle description">
+        <div class="existingBooksTitle">~Okunan Kitaplar~</div>
       </div>
-      <div class="existingBookList">
-        trail
+      <div class="existingBookList booksRContainer">
+
       </div>
 
-      <div class="booksToRead subTitle">
-        <div class="booksToReadTitle">Book To Read</div>
+      <div class="booksToRead subTitle description">
+        <div class="booksToReadTitle">~Okunacak Kitaplar~</div>
       </div>
-      <div class="readBookList">
-        trail
+      <div class="readBookList booksNrContainer">
+
       </div>
 
     </div>
   </div>
-
+  <viewport>
+    <form id="newBook">
+      <label for="bookName">Kitabın Adı :</label>
+      <input type="text" id="bookName" class="textForm" maxlength="55" autofocus><br>
+      <label for="bookAuthor">Kitabın Yazarı :</label>
+      <input type="text" id="bookAuthor" class="textForm" maxlength="40">
+      <label for="bookPages">Sayfa Sayısı :</label>
+      <input type="text" id="bookPages" class="textForm" max="5"><br>
+      <label>Okudunuz mu ? ===> </label>
+      <label for="yes">Evet</label>
+      <input type="radio" name="read" value="yes" checked="true" id="bookRead">
+      <label for="no">Hayır</label>
+      <input type="radio" name="read" value="yes" checked="true" id="bookRead"><br>
+      <input type="submit" value="Ekle" class="select"></input>
+      <button id="close select" class="select">Vazgeç</button>
+    </form>
+  </viewport>
 
   <script src="script/script.js"></script>
 </body>
