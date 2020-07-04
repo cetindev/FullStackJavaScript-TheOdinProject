@@ -134,7 +134,7 @@ viewport {
 }
 #newBook {
   display: none;
-  background-color: green;
+  background-color: crimson;
   z-index: 1;
   border: 2px solid firebrick;
   border-radius: 5px;
@@ -186,9 +186,12 @@ viewport {
   border: 1px solid red;
   margin: 5px;
   font-size: large;
+  border-radius: 10px;
+  
 }
 
 .bookDelete {
   padding: 5px;
   background-color: red;
+  border-radius: 5px;
 }
