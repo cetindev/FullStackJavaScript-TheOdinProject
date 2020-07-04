@@ -123,23 +123,29 @@ viewport {
   flex-direction: column;
   text-align: center;
   box-sizing: border-box;
+  display: flex;
+  z-index: 9;
+  align-items: center;
+    position: absolute;
+  width: 300px;
+  height: 160px;
+  top: 100px;
+  left: 340px;
 }
 #newBook {
   display: none;
   background-color: green;
   z-index: 1;
-  width: 300px;
-  height: 160px;
   border: 2px solid firebrick;
   border-radius: 5px;
   color: white;
   padding-left: 10px;
   padding-top: 5px;
   line-height: 1;
-  position: absolute;
   top: 300px;
   left: 400px;  
   box-sizing: border-box;
+  position: static;
 }
 #bookName{
   margin-left:21px;
@@ -167,7 +173,7 @@ viewport {
   border-radius: 5px;
 }
 
-.booksNrContainer {
+.BookCard {
   padding: 5px;
   height: 140px;
   width: 120px;
@@ -177,17 +183,12 @@ viewport {
   margin-bottom: 7.5px;
   margin-top: 7.5px;
   text-shadow: 1px 1px;
+  border: 1px solid red;
+  margin: 5px;
+  font-size: large;
 }
 
-.readBookList {
+.bookDelete {
   padding: 5px;
-  height: 140px;
-  width: 120px;
-  text-align: center;
-  align-content: center;
-  line-height: 1.5;
-  margin-bottom: 7.5px;
-  margin-top: 7.5px;
-  text-shadow: 1px 1px;
-
+  background-color: red;
 }

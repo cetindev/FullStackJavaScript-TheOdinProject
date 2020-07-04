@@ -179,9 +179,9 @@
   function createCard(m) {
 
     const bookCard = document.createElement('div');//setting the values
+    bookCard.classList.add('BookCard');
     bookCard.setAttribute('id', m);
     bookCard.style.color = 'black';
-    bookCard.classList.add('Book-Card');
 
     const bookTittle = document.createElement('div');//setting the values
     bookTittle.classList.add('Tittle');
@@ -199,30 +199,26 @@
     bookCard.appendChild(bookPages);
 
     const bookDelete = document.createElement('button');//to delete
-    bookDelete.innerHTML = 'Remove'
-
+    bookDelete.innerHTML = 'Kaldır';
+    bookDelete.classList.add('bookDelete');
     bookCard.appendChild(bookDelete);
-
-
     if (myLibrary[m].read) {
+
+      
       bookCard.style.backgroundColor = 'brown';//deciding its places
-
+      
       ContainerR.appendChild(bookCard);
-
     } else {
       bookCard.style.backgroundColor = 'lightblue';
-
-
       ContainerNr.appendChild(bookCard);
     }
-
 
     bookCard.addEventListener('click', (bookCard) => {//to change their place on click
       const firstCheckId = bookCard.target.parentElement.getAttribute('id');
       let id = ''
       if (firstCheckId == 'booksR-container' || firstCheckId == 'booksNr-container') {
         id = bookCard.target.getAttribute('id');//looks for the id of the item
-
+    
       } else {
         id = firstCheckId;
       }
@@ -235,8 +231,7 @@
       if (Card.style.backgroundColor == 'brown') {
         ContainerR.removeChild(Card);
         myLibrary[id].read = false;//checks the bacrgrond color to know its current location and change it
-
-
+    
         createCard(id);   //we recreate the item with a the same id but other location
       } else {
         ContainerNr.removeChild(Card);
@@ -244,14 +239,15 @@
         createCard(id); //same as above     
       }
       newBook = myLibrary[id];//for the database
+    
       replaceBook = newBook.toString();
-
+    
       forStorage = forStorage.replace(changeBook, replaceBook);
       localStorage.setItem('books', forStorage);
-
+    
     });
     bookDelete.addEventListener('click', (del) => {//to delete
-
+    
       const id = del.target.parentElement.getAttribute('id');
       const Card = document.getElementById(id);
       newBook = myLibrary[id];
@@ -259,19 +255,16 @@
       if (Card.style.backgroundColor == 'brown') {
         ContainerR.removeChild(Card);
         myLibrary.splice(id, 1);
-
+    
       } else {
         ContainerNr.removeChild(Card);
         myLibrary.splice(id, 1);
-
+    
       }
       forStorage = forStorage.replace(removeBook, '');
       localStorage.setItem('books', forStorage);   //data base
-
-    })
-
+    });
   }
 
-
-
 });
+
