@@ -125,7 +125,7 @@ viewport {
   box-sizing: border-box;
 }
 #newBook {
-  /* display: none; */
+  display: none;
   background-color: green;
   z-index: 1;
   width: 300px;
