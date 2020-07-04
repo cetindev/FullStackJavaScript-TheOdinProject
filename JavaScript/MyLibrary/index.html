@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kütüphanem</title>
+  <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/normalize.css">
+  <link rel="stylesheet" href="style/style.css">
+  <!-- ionicon -->
+  <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"> </script>
+</head>
+
+<body>
+  <!-- Html elements will be written here -->
+  <div class="container sorting">
+    <div class="containerTitle">Kütüphanem</div>
+    <div class="addBook">
+      <button type="submit" id="addBook">Kitap Ekle</button>
+    </div>
+    <div class="content">
+      <h2 class="existingBooks subTitle description">
+        <div class="existingBooksTitle">~Okunan Kitaplar~</div>
+      </h2>
+      <div class="existingBookList " id="booksRContainer">
+
+      </div>
+
+      <h2 class="booksToRead subTitle description">
+        <div class="booksToReadTitle">~Okunacak Kitaplar~</div>
+      </h2>
+      <div class="readBookList " id="booksNrContainer">
+
+      </div>
+
+    </div>
+  </div>
+  <viewport>
+    <form id="newBook">
+      <label for="bookName">Kitabın Adı :</label>
+      <input type="text" id="bookName" class="textForm" maxlength="55" autofocus><br>
+      <label for="bookAuthor">Kitabın Yazarı :</label>
+      <input type="text" id="bookAuthor" class="textForm" maxlength="40"><br>
+      <label for="bookPages">Sayfa Sayısı :</label>
+      <input type="text" id="bookPages" class="textForm" max="5"><br>
+      <label>Okudunuz mu ? ===> </label>
+      <label for="yes">Evet</label>
+      <input type="radio" name="read" value="yes" checked="true" id="bookRead">
+      <label for="no">Hayır</label>
+      <input type="radio" name="read" value="yes" id="bookRead"><br>
+      <input type="submit" value="Ekle" class="select"></input>
+      <button id="close " class="select">Vazgeç</button>
+    </form>
+  </viewport>
+
+  <script src="script/script.js"></script>
+</body>
+
+</html>
