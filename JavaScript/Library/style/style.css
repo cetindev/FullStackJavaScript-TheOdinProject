@@ -166,3 +166,28 @@ viewport {
   background-color: red;
   border-radius: 5px;
 }
+
+.booksNrContainer {
+  padding: 5px;
+  height: 140px;
+  width: 120px;
+  text-align: center;
+  align-content: center;
+  line-height: 1.5;
+  margin-bottom: 7.5px;
+  margin-top: 7.5px;
+  text-shadow: 1px 1px;
+}
+
+.readBookList {
+  padding: 5px;
+  height: 140px;
+  width: 120px;
+  text-align: center;
+  align-content: center;
+  line-height: 1.5;
+  margin-bottom: 7.5px;
+  margin-top: 7.5px;
+  text-shadow: 1px 1px;
+
+}
