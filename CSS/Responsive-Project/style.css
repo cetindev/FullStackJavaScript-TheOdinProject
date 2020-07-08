@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Indie Flower', cursive;
+  font-family: 'Yellowtail', cursive;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  text-align: center;
+  background-color: #333;
+  color: white;
+}
+a {
+  text-decoration: none;
+}
+p {
+  padding: 1.6rem 0 ;
+}
+
+/*header kısmı*/
+header {
+  height: 45rem;
+}
+
+header .bg-image {
+  position: absolute;
+  background-image: url(img/bg.jpeg);
+  background-size: cover;
+  background-position: center;
+  height: 45rem;
+  width: 100%;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+header h1 {
+  padding: 11rem;
+  padding-bottom: 0;
+}
+
+.btn {
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  border: 1px solid #666;
+  padding: 1.6rem 3.2rem; /* İlki yukarı aşağı 2.si sağdan soldandır */
+  margin: .5rem 0;
+  transition: 900ms all;
+  border-radius: 5px;
+}
+.btn:hover {
+  background-color: #eaeaea;
+  color: #333;
+}
