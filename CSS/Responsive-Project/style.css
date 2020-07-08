@@ -50,7 +50,7 @@ header h1 {
   padding: 1.6rem 3.2rem; /* İlki yukarı aşağı 2.si sağdan soldandır */
   margin: .5rem 0;
   transition: 900ms all;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 .btn:hover {
   background-color: #eaeaea;
