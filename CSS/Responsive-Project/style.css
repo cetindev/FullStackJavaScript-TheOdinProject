@@ -49,10 +49,11 @@ header h1 {
   border: 1px solid #666;
   padding: 1.6rem 3.2rem; /* İlki yukarı aşağı 2.si sağdan soldandır */
   margin: .5rem 0;
-  transition: 900ms all;
+  transition: 500ms all;
   border-radius: 6px;
 }
 .btn:hover {
   background-color: #eaeaea;
   color: #333;
+  text-decoration: underline;
 }
