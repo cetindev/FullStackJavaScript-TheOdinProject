@@ -1,8 +1,11 @@
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  
 }
 html {
-  font-size: 7px;
+  font-size: 6px;
 }
 
 body {
@@ -19,7 +22,7 @@ a {
 }
 p {
   padding: 1.6rem 0 ;
-  font-size: rem;
+  font-size:2rem;
 }
 img {
   width: 100%;
@@ -75,7 +78,6 @@ header h1 {
 }
 #section-b ul {
   list-style: none;
-  padding: 0px;
 }
 /*Secrtion b*/
 #section-b {
@@ -98,8 +100,6 @@ header h1 {
 /*section-d*/
 #section-d div.box p a {
   color: white;
-
-
 }
 #section-d .box:first-child {
   background-color: #2690d4;
