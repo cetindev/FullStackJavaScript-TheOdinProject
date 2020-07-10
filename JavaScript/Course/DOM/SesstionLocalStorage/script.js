@@ -1,73 +1,47 @@
-//Event Bubbling 
+var let;
 
-//Burdaki olay eğer karta tıklanırsa o kardın üst elemanıda etkilenir.
-//Bunu isteniyorsak e.stopPropagation(); yaparak sonlandırabiliriz.
+//Local Storage
+const firstName = localStorage.setItem('firstName', 'Sadık');
+const lastName = localStorage.setItem('lastName', 'Turan');
 
+//get item
+val = localStorage.getItem('firstName');
+val = localStorage.getItem('lastName');
 
+//
+let hobies = [
+  "top oynamak ",
+  'kitap okumak',
+  "coding"
+]
+//set array to storage
+localStorage.setItem('hobies', JSON.stringify(hobies));
+val = JSON.parse(localStorage.getItem('hobies'));
+//remove item
+/* localStorage.removeItem('firsName');
+localStorage.removeItem('lastName'); */
 
-const form = document.querySelector('form');
-const cardBody = document.querySelector('.card-body');
-const card = document.querySelector('.card');
-const container = document.querySelector('.container');
-/* 
-form.addEventListener('click', function (e) {
-  console.log('form');
-  e.stopPropagation();
-});
-cardBody.addEventListener('click', function (e) {
-  console.log('card body');
-  e.stopPropagation();
-});
-card.addEventListener('click', function (e) {
-  console.log('card');
-  e.stopPropagation();
-});
-container.addEventListener('click', function (e) {
-  console.log('container');
-  e.stopPropagation();
-});
- */
-//Event Captuing 
-//En dıştan içe doğru yapa yapmamız için 3.bir parametre alır ve bu da true değerinin
-//döndürür.
-//yani bu en dışdan içe doğru yaparsak en dışdakine  ulaşırız ve belki saçma olabilir.
+//clear
+localStorage.clear();
+
+console.log(val);
+console.log(localStorage);
 
 
-/* 
-form.addEventListener('click', function (e) {
-  console.log('form');
-  e.stopPropagation();
-}, true);
-cardBody.addEventListener('click', function (e) {
-  console.log('card body');
-  e.stopPropagation();
-}, true);
-card.addEventListener('click', function (e) {
-  console.log('card');
-  e.stopPropagation();
-}, true);
-container.addEventListener('click', function (e) {
-  console.log('container');
-  e.stopPropagation();
-}, true); */
-/* 
- const deleteItem = document.querySelectorAll('.fa-times');
- 
- deleteItem.forEach(function (item) {
-   item.addEventListener('click', function (e) {
-     console.log(e.target);
-   })
- })
- 
- 
- console.log(deleteItem);; */
 
 
-const ul = document.querySelector('ul');
 
-ul.addEventListener('click', function (e) {
-  if (e.target.className === 'fas fa-times') {
-    e.target.parentElement.parentElement.remove();
-    e.preventDefault();
-  }
-})
+
+
+
+
+/*
+//Session Storage
+const city = sessionStorage.setItem('city', 'Kocaeli');
+const country = localStorage.setItem('country', 'Turkey');
+console.log(localStorage);
+console.log(sessionStorage); */
+
+
+//Local storage sitenin ilgili URL si ile kaydettiğiniz bilgiler kalır yani silinmezz siz siteyi kapatsanızda silinmez
+//Ancak session storage ise siteyi kapattığınız anda bilgiler silininr.
