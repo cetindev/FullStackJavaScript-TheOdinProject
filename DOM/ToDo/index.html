@@ -12,7 +12,58 @@
 </head>
 
 <body>
-  
+
+  <div class="container p-3">
+    <h1 class="app-title" id="header">Yapılacaklar Listesi</h1>
+    <div class="card">
+      <div class="card-header">
+        Yeni Görev
+      </div>
+      <div class="card-body">
+        <form id="addTaskForm">
+          <div class="input-group mt-3">
+            <input class="form-control" type="text" id="txtTaskName" placeholder="Yeni Bir Görev Yazın">
+            <div class="input-group-append">
+              <button class="btn btn-primary" type="submit" id="btnAddNewTask">
+                <i class="fas fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="card mt-3">
+      <div class="card-header">
+        Görev Listesi
+        <a href="#" id="btnDeleteAll" class="btn btn-outline-danger btn-sm delete-all float-right">
+          Hepsini Silin
+        </a>
+      </div>
+      <ul id="task-list" class="list-group">
+        <li class="list-group-item list-group-item-secondary">To do item
+          <a href="#" class="delete-item float-right">
+            <i class="fas fa-times"></i>
+          </a>
+        </li>
+        <li class="list-group-item list-group-item-secondary">To do item
+          <a href="#" class="delete-item float-right">
+            <i class="fas fa-times"></i>
+          </a>
+        </li>
+        <li class="list-group-item list-group-item-secondary">To do item
+          <a href="#" class="delete-item float-right">
+            <i class="fas fa-times"></i>
+          </a>
+        </li>
+        <li class="list-group-item list-group-item-danger">To do item
+          <a href="#" class="delete-item float-right">
+            <i class="fas fa-times"></i>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
 
 
 
