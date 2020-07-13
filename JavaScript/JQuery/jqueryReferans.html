@@ -10,7 +10,8 @@
 </head>
 
 <body>
-  <h3>Jquery Dersleri</h3>
+  <a href="#">link</a>
+  <h3 id="header">Jquery Dersleri</h3>
   <ul id="liste">
     <li class="item">JQuery Referans</li>
     <li>Selectors <a href="#">link</a></li>
@@ -18,11 +19,28 @@
   </ul>
 
   <script>
-    console.log($('#liste'));
-    console.log($('h3'));
-    console.log($('li'));
-    console.log($('.item'));
-    console.log($('ul li a'));
+    /*     console.log($('#liste'));
+        console.log($('h3'));
+        console.log($('li'));
+        console.log($('.item'));
+        console.log($('ul li a')); */
+
+    //styling content
+    $('#header').css("color", 'blue');
+    $('#liste a').css('text-decoration', 'none');
+    //birden fazla eleman eklemek için
+    var styles = {
+      color: 'yellow',
+      fontSize: "20px",
+      border: "1px solid red"
+    }
+    $('ul li').css(styles);
+    //farklı bir yol daha daha kısa yine 
+    $('a').css({
+      color: 'yellow',
+      fontSize: "20px",
+      border: '2px solid blue'
+    })
   </script>
 </body>
 
