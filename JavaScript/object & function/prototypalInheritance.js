@@ -14,9 +14,19 @@ let Teacher = function (name, yearOfBirth, job, subject) {
   Person.call(this, name, yearOfBirth, job);
   this.subject = subject;
 }
+
+//Inherit the person prototypr methods
+Teacher.prototype = Object.create(Person.prototype);
+//set teacger connstructor 
+
+Teacher.prototype.greeting = function () {
+  return 'Hello My name is ' + this.nama;
+}
+Teacher.prototype.constructor = Teacher; 
+console.log(Teacher.prototype.constructor);
+
 let emel = new Teacher('emel', 1989, 'teacher', 'math');
 
-//
 
 console.log(emel);
-console.log(emel.job);
+console.log(emel.calculateAge());
