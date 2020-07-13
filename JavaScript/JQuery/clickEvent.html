@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Click Event</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <style>
+    .paragrafRenklendir {
+      color: red;
+      font-size: 25px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <p id="p1">Web Developer Eğitimi</p>
+  <p id="p2">Web Developer Eğitimi</p>
+  <p class="paragraf">Web Developer Eğitimi</p>
+  <p class="paragraf">Web Developer Eğitimi</p>
+
+  <script>
+    $(document).ready(function () {
+      $('.paragraf').click(function () {
+        alert('p1 Click event oldu.');
+        $(this).addClass('paragrafRenklendir');//veya $('.paragraf').attr('class', 'paragrafRenklendir');
+      })
+    })
+  </script>
+</body>
+
+</html>

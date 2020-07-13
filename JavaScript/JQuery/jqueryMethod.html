@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Method</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <style>
+    .highlight {
+      background-color: yellow;
+    }
+
+    .green {
+      background-color: green;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Jquery Helper Methods</h1>
+
+  <ul id="liste">
+    <li>JQuery Selectors</li>
+    <li>JQuery Methods</li>
+    <li>JQuery Animations</li>
+  </ul>
+  <img src="img/koala.png" width="200px " alt="">
+  <input id="ad" placeholder="Adınız: " type="text" placeholder="FullName" value="deneme">
+  <input id="soyad" placeholder="Soyadınız: " type="text" class="green" placeholder="FullName" value="deneme">
+  <button id="btnKaydet" onclick="adsoyad()">Kaydet</button>
+  <script>
+    console.log($('h1').text());
+    console.log($('ul').text());
+    $('h1').text('JavaScript');
+    console.log($('input').val());
+    $('input').val('Boş');
+
+    $('img').attr('width', '400px')
+
+    function adsoyad() {
+      var ad = $('#ad').val();
+      var soyad = $('#soyad').val();
+      console.log('Adınız ve Soyadınız: ' + ad + " " + soyad);
+      $('#ad').toggleClass('highlight');
+      $('#soyad').removeClass('green');
+    }
+  </script>
+</body>
+
+</html>
