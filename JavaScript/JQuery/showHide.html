@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <title>Show-Hide</title>
+</head>
+
+<body>
+
+  <P>Sıfırdan Web Developer</P>
+  <button id="hide">Hide</button>
+  <button id="show">Show</button>
+  <button id="toggle">Toggle</button>
+
+  <script>
+       $(document).ready(function () {
+          $('#hide').click(function () {
+            $('p').hide(1000);
+          });
+          $('#show').click(function () {
+            $('p').show(800, function () {
+              alert('Paragraf Gösterildi!!!')
+            });
+          });
+          $('#toggle').click(function () {
+            $('p').toggle('slow')
+          });
+        }) 
+  </script>
+</body>
+
+</html>
