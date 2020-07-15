@@ -10,8 +10,6 @@ class Restaurant {
     let food = [];
     food = orders.split(',');
     food.forEach(addFood);
-
-
   }
 }
 var price = 0;
