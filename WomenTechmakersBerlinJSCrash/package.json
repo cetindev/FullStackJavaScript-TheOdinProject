@@ -1,0 +1,12 @@
+{
+  "name": "WomenTechmakersBerlinJSCrash",
+  "version": "1.0.0",
+  "description": "The repository for examples and weekly material in JavaScript Crash Course 2019",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
