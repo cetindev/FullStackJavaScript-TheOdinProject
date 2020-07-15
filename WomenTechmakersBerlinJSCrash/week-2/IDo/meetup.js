@@ -1,4 +1,6 @@
-module.exports = Meetup = class {
+const Chalk = require('chalk')
+
+module.exports = class Meetup {
   constructor(name) {
     this.name = name
     this.attendees = [];
@@ -8,4 +10,4 @@ module.exports = Meetup = class {
   }
 }
 
-printName = person => console.log(person.name);
+const printName = person => console.log(Chalk.bgGreen(person.name));
