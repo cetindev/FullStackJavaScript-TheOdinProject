@@ -1,5 +1,4 @@
 
-
 module.exports = class Food {
   constructor() {
 
@@ -8,21 +7,21 @@ module.exports = class Food {
     anayemekler: [
       {
         'foodName': 'Döner',
-        'foodPrice': 10,
+        'foodPrice': '10TL',
       },
       {
         'foodName': 'Lahmacun',
-        'foodPrice': 15,
+        'foodPrice': '15TL',
       },
       {
         'foodName': 'Kebap',
-        'foodPrice': 20,
+        'foodPrice': '20TL',
       },
     ],
     suluYemekler: [
       {
         'foodName': 'Mercimek Çorbası',
-        'foodPrice': 7.5,
+        'foodPrice': '7.5TL',
       }
     ]
   }

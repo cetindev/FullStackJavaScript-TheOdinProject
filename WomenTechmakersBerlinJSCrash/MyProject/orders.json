@@ -1,17 +1,1 @@
-[
-  {
-    "costumer": "Cihat",
-    "orders": "Lahmacun,Döner,Kebap",
-    "address": "Beşyüz Evler İstanbul/GOP"
-  },
-  {
-    "costumer": "Ali",
-    "orders": "Lahmacun,Döner",
-    "address": "Esenler  Malatya/GOP"
-  },
-  {
-    "costumer": "Ayşe",
-    "orders": "Lahmacun,Döner,Kebap",
-    "address": "Etiler  İstanbul/GOP"
-  }
-]
+[{"costumer":"Cihat","orders":"Lahmacun,Döner,Kebap","address":"Beşyüz Evler İstanbul/GOP"},{"costumer":"Ali","orders":"Lahmacun,Döner","address":"Esenler  Malatya/GOP"},{"costumer":"Ayşe","orders":"Lahmacun,Döner,Kebap","address":"Etiler  İstanbul/GOP"}]
