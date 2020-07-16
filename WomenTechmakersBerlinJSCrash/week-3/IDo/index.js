@@ -16,15 +16,15 @@ console.log(Chalk.blue.bgRed.bold(wtmb.name))
 
 Database.save('meetup.json', wtmb) */
 
-const loadedFile = Database.load('meetup.json', (err, loadedFile) => {
-  console.log('Hello');
-})
 const Person = require('./person')
-const wtmb = Meetup.create(loadedFile);
-const omur = new Person('Omur', 30);
-const cihat = new Person('Cihat', 20);
-omur.attend(wtmb)
-/* cihat.attend(wtmb); */
-/* Database.save('./meetup.json', wtmb); */
-wtmb.printAttendeeNames();
-console.log(wtmb.name);
+Database.load('meetup.json', (err, loadedFile) => {
+  console.log('Hello');
+  const wtmb = Meetup.create(loadedFile);
+  const omur = new Person('Omur', 30);
+  // const cihat = new Person('Cihat', 20);
+  omur.attend(wtmb)
+  /* cihat.attend(wtmb); */
+  /* Database.save('./meetup.json', wtmb); */
+  wtmb.printAttendeeNames();
+  console.log(wtmb.name);
+})

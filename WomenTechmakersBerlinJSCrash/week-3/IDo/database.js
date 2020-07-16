@@ -5,8 +5,8 @@ const save = function (filename, data) {
 }
 
 const load = function (filename, callback) {
-  s.readFileSync(filename, 'utf8', (file) => {
-    callback(JSON.parse(file));
+  fs.readFileSync(filename, 'utf8', (err, file) => {
+    callback(err, JSON.parse(file));
   })
 }
 
