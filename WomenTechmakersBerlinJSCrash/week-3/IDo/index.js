@@ -16,8 +16,9 @@ console.log(Chalk.blue.bgRed.bold(wtmb.name))
 
 Database.save('meetup.json', wtmb) */
 
-const Person = require('./person')
 Database.load('meetup.json', (err, loadedFile) => {
+
+  const Person = require('./person')
   console.log('Hello');
   const wtmb = Meetup.create(loadedFile);
   const omur = new Person('Omur', 30);
