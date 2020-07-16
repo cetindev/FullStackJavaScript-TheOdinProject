@@ -1,1 +1,25 @@
-{"name":"Women Techmakers Berlin","attendees":[{"name":"Armagan","age":35,"meetup":"Women Techmakers Berlin"},{"name":"Mert","age":34,"meetup":"Women Techmakers Berlin"}]}
+{
+  "name": "Women Techmakers Berlin",
+  "attendees": [
+    {
+      "name": "Armagan",
+      "age": 35,
+      "meetup": "Women Techmakers Berlin"
+    },
+    {
+      "name": "Mert",
+      "age": 34,
+      "meetup": "Women Techmakers Berlin"
+    },
+    {
+      "name": "Omur",
+      "age": 30,
+      "meetup": "Women Techmakers Berlin"
+    },
+    {
+      "name": "Cihat",
+      "age": 20,
+      "meetup": "Women Techmakers Berlin"
+    }
+  ]
+}
