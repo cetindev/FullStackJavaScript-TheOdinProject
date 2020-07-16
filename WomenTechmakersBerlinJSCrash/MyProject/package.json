@@ -1,0 +1,15 @@
+{
+  "name": "MyProject",
+  "version": "1.0.0",
+  "description": "1) Create a GitHub account\r 2) Come up with your very own project idea that you will build throughout the course (you can change this afterwards)\r 3) Create at least 2 different classes and several instances for these classes for your projects\r 4) create at least 3 different interactions between said classes\r 5) Publish your code as an `index.js` file to your GitHub account",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Cihat SALİK",
+  "license": "MIT",
+  "devDependencies": {
+    "chalk": "^4.1.0"
+  }
+}

@@ -10,5 +10,6 @@ module.exports = class Person {
   attend(meetup) {
     this.meetup = meetup.name
     meetup.attendees.push(this)
+    this.meetups.attendees.push(this);
   }
 }
