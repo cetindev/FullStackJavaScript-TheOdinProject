@@ -1,3 +1,5 @@
+const Chalk = require('chalk');
+
 module.exports = class Customer {
   constructor(customerName, location, orders) {
     this.customerName = customerName;
