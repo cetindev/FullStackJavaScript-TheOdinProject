@@ -6,6 +6,4 @@ The repository for examples and weekly material in JavaScript Crash Course 2019
 The codes in the tutorial on the videos on the Youtube link above
 
 
-
-
 // Vol3 Lecture3 =>  2:23:28' kaldım ve ***(İngilizceni düzelt gel baştan baş)
