@@ -14,7 +14,7 @@ console.log(result)
 */
 
 /*
-//Filter metodu, dizinin elemanlarını filtrelemeyi sağlar. 
+//Filter metodu, dizinin elemanlarını filtrelemeyi sağlar.
 //Sonuç yeni bir dizi olarak dönecektir. Ana dizinin elemanlarını değiştirmez.
 var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 var result = array.filter(function (piece) {
@@ -49,4 +49,12 @@ var user = users.find(function (user) {
 })
 
 console.log(user)
+*/
+
+/*
+//From metodu, belirli uzunlukta dizi oluşturmayı sağlar.Bundan dolayı 2 parametre alır .Biri uzunluğudur.
+var array = Array.from({ length: 10 }, function (value, index) {
+  return index * 2
+})
+console.log(array)
 */
