@@ -69,3 +69,13 @@ var result = array.map(function (piece) {
 console.log(result);
 console.log(array)
 */
+
+
+/*
+//Reduce metodu, dizi elemanları üzerinde işlem yapar ve sonucu tek bir değer şeklinde döndürür.
+var total = [10, 5, 4, 6].reduce(function (sum, value) {
+  return sum + value
+}, 1)
+
+console.log(total)
+*/
