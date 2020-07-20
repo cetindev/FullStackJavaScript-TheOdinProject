@@ -25,3 +25,28 @@ var result = array.filter(function (piece) {
 
 console.log(result)
 */
+
+/*
+//Find metodu, dizi içerisinde arama yapmayı sağlar.
+var users = [
+  {
+    id: 1,
+    name: 'alpcan'
+  },
+  {
+    id: 2,
+    name: 'hasan'
+  },
+  {
+    id: 3,
+    name: 'burak'
+  }
+]
+var user = users.find(function (user) {
+  if (user.name === 'hasan') {
+    return user
+  }
+})
+
+console.log(user)
+*/
