@@ -79,3 +79,15 @@ var total = [10, 5, 4, 6].reduce(function (sum, value) {
 
 console.log(total)
 */
+
+/*
+//Some metodu, dizideki elemanlardan en az birisinin koşula uyması durumunda mantıksal bir dönüt yapar.
+var array = [1, 2, 3, 4, 5]
+var result = array.some(function (piece) {
+  if (piece > 4) {
+    return true
+  }
+})
+
+console.log(result)
+*/
