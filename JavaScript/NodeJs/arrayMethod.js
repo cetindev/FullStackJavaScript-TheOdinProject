@@ -58,3 +58,14 @@ var array = Array.from({ length: 10 }, function (value, index) {
 })
 console.log(array)
 */
+
+/*
+//Map metodu, çağırılan dizide elemanların üzerinde işlem yapar ve yeni bir dizi olarak döndürür.
+var array = ['cagatay', 'cali', 'javascript', 'eğitimi']
+var result = array.map(function (piece) {
+  return piece.toUpperCase()
+})
+
+console.log(result);
+console.log(array)
+*/
