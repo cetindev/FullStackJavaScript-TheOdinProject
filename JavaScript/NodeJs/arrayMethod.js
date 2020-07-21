@@ -123,6 +123,7 @@ b.brother = ['Aslı', 'Melih', 'İrem']
 
 console.log(b);
  */
+/* 
 const array = [1, 2, 3, 4, 5] // Örneklem bir dizi oluşturalım.
 
 function hello() {
@@ -139,5 +140,36 @@ function world() {
   }
   console.log(i) // Artan i değeri burada let kullanımından dolayı erişilemez.
 }
+ */
+//world();
 
-world();
+/* 
+//es6 kısaltmaları
+var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+const result = array.filter(piece => piece % 2);
+
+console.log(result) */
+
+/* 
+const array = [4, 1, 21, 56, 12, 64, 42, 23, 94, 10]
+console.log(array.sort((piece, next) => piece < next));
+ */
+
+/* 
+function hello(name, surname, ...a) { // Bu ... operatörünü dizilerde de kullanabilirsiniz.
+  console.log(name, surname, a) // Cagatay Cali [ 'Pamukkale University', 21, [ 'wind surfing', 'coding' ] ]
+  
+  //  Burada diğer değişkenleri yakalamak için yine ES6 nın bir özelliğini kullanacağız.
+  
+  const [university, age, hobbies] = a
+  console.log(university, age, hobbies) // Pamukkale University 21 [ 'wind surfing', 'coding' ]
+}
+
+hello('Cagatay', 'Cali', 'Pamukkale University', 21, ['wind surfing', 'coding'])
+ */
+/* 
+const myCoolObject = { name: 'cagatay', description: 'Open-source contributor', age: 21, university: 'Pamukkale University' }
+const { name, description, age, university } = myCoolObject
+console.log(name, description, age, university) // cagatay Open-source contributor 21 Pamukkale University
+ */
