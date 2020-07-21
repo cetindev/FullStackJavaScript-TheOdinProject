@@ -106,3 +106,38 @@ array.slice(0) // Dizinin verilen anahtarlı değerini diziden ayırır
 
 //Daha fazla açıklama için aşağıdaki linke daha açıklayıcıdır.
 //    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+/*
+//let'in kapsamı
+const b = {
+  name: 'Cagatay',
+  age: 21,
+  university: 'Pamukkale University'
+}
+
+// Üniversiteyi değiştirelim.
+b.university = 'San Jose State University'
+b.hobbies = ['wind surfing', 'coding', 'bug bounty research']
+b.brother = ['Aslı', 'Melih', 'İrem']
+
+
+console.log(b);
+ */
+const array = [1, 2, 3, 4, 5] // Örneklem bir dizi oluşturalım.
+
+function hello() {
+  for (var i = 0; i < array.length; i++) {
+    array[i]
+  }
+  console.log(i, i + 1, i + 2) // Artan i değeri burada erişilebilir.
+}
+//hello();
+
+function world() {
+  for (var i = 0; i < array.length; i++) {
+    array[i]
+  }
+  console.log(i) // Artan i değeri burada let kullanımından dolayı erişilemez.
+}
+
+world();
